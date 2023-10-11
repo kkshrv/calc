@@ -9,8 +9,8 @@ void sub(double a, double b);
 void multiply(double a, double b);
 void division(double a, double b);
 void degree(double a, double b);
-void factorial(unsigned long long a);
-int fact(unsigned long long a);
+void factorial(int a);
+unsigned long long fact(int a);
 void matrixSum(); // по-хорошему, надо бы разбить эту процедуру на отдельные функции инициализации и суммы
 
 
@@ -83,15 +83,15 @@ void degree(double a, double b)
     cout << "Result equals " << pow(a, b) << endl << endl;
 }
 
-int fact(unsigned long long a)
+unsigned long long fact(int a)
 {
     if (a > 1) return a * fact(a - 1);
     else return 1;
 }
 
-void factorial(unsigned long long a)
+void factorial(int a)
 {
-    if (a > 31) cout << "Sorry, this is too large" << endl << endl;
+    if (a > 65) cout << "Sorry, this is too large" << endl << endl;
     else cout << "Result equals " << fact(a) << endl << endl;
 }
 
