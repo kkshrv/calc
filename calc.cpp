@@ -37,6 +37,7 @@ int main()
                     case '-': sub(a, b); break;
                     case '*': multiply(a, b); break;
                     case '/': division(a, b); break;
+                    default: break;
                 }
                 break;
             case 2:
@@ -53,6 +54,7 @@ int main()
             case 4:
                 matrixSum();
                 break;
+            default: break;
     }
     } 
 }
@@ -74,8 +76,11 @@ void multiply(double a, double b)
 
 void division(double a, double b)
 {
-    if (b != 0) cout << "Result equals " << a / b << endl << endl;
-    else cout << "ZeroDivisionError" << endl << endl;
+    if (b == 0){ 
+         cout << "ZeroDivisionError" << endl << endl;
+         return;
+    }
+    cout << "Result equals " << a / b << endl << endl;
 }
 
 void degree(double a, double b)
