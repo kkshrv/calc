@@ -8,7 +8,7 @@ void sum(double a, double b);
 void sub(double a, double b);
 void multiply(double a, double b);
 void division(double a, double b);
-void degree(double a, double b);
+void power(double a, double b);
 void factorial(int a);
 unsigned long long fact(int a);
 void matrixSum(); // по-хорошему, надо бы разбить эту процедуру на отдельные функции инициализации и суммы
@@ -41,9 +41,9 @@ int main()
                 }
                 break;
             case 2:
-                cout << "Input a num and its degree:" << endl;
+                cout << "Input a num and its power:" << endl;
                 cin >> a >> b;
-                degree(a, b);
+                power(a, b);
                 break;
             case 3:
                 int f;
@@ -83,7 +83,7 @@ void division(double a, double b)
     cout << "Result equals " << a / b << endl << endl;
 }
 
-void degree(double a, double b)
+void power(double a, double b)
 {
     cout << "Result equals " << pow(a, b) << endl << endl;
 }
@@ -103,7 +103,7 @@ void factorial(int a)
 void matrixSum()
 {
     int rows, cols;
-    cout << "Input size of matrixes separated by a space, please" << endl;
+    cout << "Input size of matrices separated by a space, please" << endl;
     cin >> rows >> cols;
     double** matrix1 = new double*[rows];
     double** matrix2 = new double*[rows];
@@ -130,7 +130,7 @@ void matrixSum()
             cin >> matrix2[i][j];
     }
     
-    cout << "Summing matrixes..." << endl;
+    cout << "Summing matrices..." << endl;
     int sum = 0;
     for (int i = 0; i < rows; i++)
     {
