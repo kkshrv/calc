@@ -182,15 +182,15 @@ class Caracal : public Mammal
         {
             srand(time(NULL));
             int choice = rand() % 3;
-            if (choice == 0)
-            {
-                cout << name << " is bombing Yugoslavia" << endl;
-            }
-            else if (choice == 1)
-            {
-                cout << name << " is bombing Dresden" << endl;
-            }
-            else cout << name << " is bombing Hamburg" << endl;
+            switch (choice):
+                {
+                    case 0:
+                        cout << name << " is bombing Yugoslavia" << endl;
+                    case 1:
+                        cout << name << " is bombing Dresden" << endl;
+                    case 2:
+                        cout << name << " is bombing Hamburg" << endl;
+                }
         }
 };
 
